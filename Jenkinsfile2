@@ -1,8 +1,8 @@
 pipeline {
     agent any
-    options {
-        parallelsAlwaysFailFast()
-    }
+    //options {
+    //    parallelsAlwaysFailFast()
+    //}
     stages {
         stage('Create  directory for the WEB Application')        
        {
@@ -19,7 +19,7 @@ pipeline {
                 stage('Drop apache container'){
                     steps {
                         echo 'droping the Apache container...'
-                        sh 'docker rm -f app-web-apache'
+                        sh 'ocker rm -f app-web-apache'
                     }
                 }
                 stage('Drop Nginx Container'){
