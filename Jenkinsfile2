@@ -1,6 +1,8 @@
 pipeline {
     agent any
-    
+    options {
+        parallelAllwaysFailFast()
+    }
     stages {
         stage('Create  directory for the WEB Application')        
        {
