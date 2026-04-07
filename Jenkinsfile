@@ -31,7 +31,7 @@ pipeline {
                 }
                 stage('Create the Nginx container') {
                    steps {
-                   echo 'Creating the Apache container...'
+                   echo 'Creating the Nginx container...'
                    sh 'docker run -dit --name app-web-nginx -p 9200:80  -v /Users/orlando/jenkins/app-web:/usr/share/nginx/html nginx'         
                    }
                 }       
